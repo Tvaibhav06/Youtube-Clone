@@ -1,4 +1,3 @@
-Sure! Here’s the entire finalized **README.md** in one complete Markdown block — ready for you to copy and paste directly into your project:
 
 ---
 
@@ -10,6 +9,27 @@ Sure! Here’s the entire finalized **README.md** in one complete Markdown block
 	<br/>
 	<sub>For learning purposes only — not affiliated with Google or YouTube.</sub>
 </div>
+```
+---
+
+## ✨ Features
+
+- Browse trending videos by category (Gaming, Music, Sports, News, etc.)
+- Watch videos through an embedded YouTube player
+- View detailed video info (views, upload date, description, channel)
+- Recommended videos with fallback support
+- Fully responsive layout (collapsible sidebar, adaptive search bar)
+- Comments section with avatars and timestamps
+- Category-based filtering using YouTube category IDs
+- Environment-based API key management (`.env` file)
+<p align="center">
+	<h1 align="center">React YouTube Clone</h1>
+	<p align="center">A simple, lightweight YouTube‑style video app built with React 19, Vite, and the YouTube Data API v3.</p>
+	<p align="center">
+		<img src="./src/assets/logo.png" alt="Logo" width="140" />
+	</p>
+	<p align="center"><sub>For learning purposes only — not affiliated with Google or YouTube.</sub></p>
+</p>
 
 ---
 
@@ -28,8 +48,7 @@ Sure! Here’s the entire finalized **README.md** in one complete Markdown block
 
 ## 🗂 Project Structure
 
-```
-
+```text
 react-ytclone/
 ├── public/                 # Static assets
 ├── src/
@@ -50,8 +69,7 @@ react-ytclone/
 ├── .env.example            # Example environment variables
 ├── package.json            # Dependencies and scripts
 └── vite.config.js          # Vite config
-
-````
+```
 
 ---
 
@@ -61,7 +79,7 @@ Create a `.env` file in the root directory based on `.env.example`:
 
 ```bash
 VITE_YOUTUBE_API_KEY=your_api_key_here
-````
+```
 
 You can generate an API key from the **Google Cloud Console** by enabling the **YouTube Data API v3**.
 
@@ -83,144 +101,135 @@ npm install
 npm run dev
 ```
 
-Then open the local URL shown in your terminal (default: [http://localhost:5173](http://localhost:5173)).
-
-### 3. Build for production
-
-```bash
-npm run build
-```
-
-### 4. Preview the production build
-
-```bash
-npm run preview
-```
+Open the local URL shown in your terminal (default: http://localhost:5173).
 
 ---
 
 ## 🧭 Routing
 
-| Path                          | Description                      |
-| ----------------------------- | -------------------------------- |
-| `/`                           | Home feed with category browsing |
-| `/video/:categoryId/:videoId` | Video playback page              |
+| Path | Description |
+|------|-------------|
+| `/` | Home feed with category browsing |
+| `/video/:categoryId/:videoId` | Video playback page |
 
-The `useParams()` hook is used to access route parameters in the Video and PlayVideo components.
+Parameters are accessed with `useParams()` inside page components.
 
 ---
 
 ## 🔗 YouTube Categories Used
 
-| Category      | ID |   | Category         | ID |
-| ------------- | -- | - | ---------------- | -- |
-| Gaming        | 20 |   | Music            | 10 |
-| Sports        | 17 |   | News & Politics  | 25 |
-| Entertainment | 24 |   | People & Blogs   | 22 |
-| Technology    | 28 |   | Autos & Vehicles | 2  |
-| Howto & Style | 26 |   | Blogs            | 22 |
+| Category          | ID |
+|-------------------|----|
+| Gaming            | 20 |
+| Music             | 10 |
+| Sports            | 17 |
+| News & Politics   | 25 |
+| Entertainment     | 24 |
+| People & Blogs    | 22 |
+| Technology        | 28 |
+| Autos & Vehicles  | 2  |
+| Howto & Style     | 26 |
 
-> The app falls back gracefully if an invalid or unsupported ID is used.
+> Fallback: If a category fetch fails or yields no results, popular videos are loaded instead.
 
 ---
 
 ## 🧩 Main Components
 
-| Component     | Description                                    |
-| ------------- | ---------------------------------------------- |
-| `Navbar`      | Displays brand, search bar, and user actions   |
-| `Sidebar`     | Lists categories with active state             |
-| `Feed`        | Fetches and displays main video grid           |
-| `PlayVideo`   | Handles video playback, metadata, and comments |
-| `Recommended` | Shows related or popular videos                |
+| Component | Description |
+|-----------|-------------|
+| `Navbar` | Brand, search UI, user icon placeholders |
+| `Sidebar` | Category selection with active state |
+| `Feed` | Grid of popular videos for selected category |
+| `PlayVideo` | Embedded player + metadata + comments |
+| `Recommended` | Related / popular video suggestions |
 
 ---
 
 ## 🛠 Utilities
 
-* **`valueConverter(number)`** – Converts large numbers (e.g. `15320 → 15K`, `2150000 → 2M`)
-* **`moment`** – Formats publish dates into “time ago” strings (e.g. `3 days ago`)
+- **`valueConverter(number)`** – 15320 → `15K`, 2150000 → `2M`
+- **`moment`** – Relative publish times (e.g., `3 days ago`)
 
 ---
 
-## ⚙️ API Reference
+## ⚙️ API Reference (Conceptual)
 
-| Purpose            | Endpoint Example                                             |
-| ------------------ | ------------------------------------------------------------ |
-| Get popular videos | `videos?chart=mostPopular&videoCategoryId=...`               |
-| Get video details  | `videos?id={videoId}&part=snippet,contentDetails,statistics` |
-| Get channel info   | `channels?id={channelId}&part=snippet,statistics`            |
-| Get comments       | `commentThreads?videoId={videoId}&part=snippet,replies`      |
+| Purpose | Endpoint Pattern |
+|---------|------------------|
+| Popular videos | `videos?chart=mostPopular&videoCategoryId={id}` |
+| Video details | `videos?id={videoId}&part=snippet,contentDetails,statistics` |
+| Channel info | `channels?id={channelId}&part=snippet,statistics` |
+| Comments | `commentThreads?videoId={videoId}&part=snippet,replies` |
 
-> Each request consumes API quota. Too many refreshes may hit daily limits.
+> Each request consumes quota. Heavy refreshing may exhaust daily limits.
 
 ---
 
 ## 🧪 Available Scripts
 
-| Command           | Description                           |
-| ----------------- | ------------------------------------- |
-| `npm run dev`     | Start development server              |
-| `npm run build`   | Build for production (`dist/` folder) |
-| `npm run preview` | Preview production build              |
-| `npm run lint`    | Run ESLint checks                     |
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production (`dist/`) |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint checks |
 
 ---
 
 ## 📱 Responsive Design
 
-* Search bar hides on smaller screens
-* Sidebar collapses into a toggle menu
-* Video player and recommendations stack vertically on mobile
+- Search bar condenses / hides on narrow viewports
+- Sidebar collapses (state controlled)
+- Player and recommendations stack vertically on mobile
 
 ---
 
 ## 🔐 API Key & Security
 
-* **Never commit your `.env` file**
-* Public/demo keys may stop working — always use your own
-* “403” or quota errors usually mean your key is exhausted or misconfigured
+- Do **not** commit `.env`
+- Use your own key (demo keys may be revoked)
+- 403 or quota errors often mean daily quota exhausted
 
 ---
 
 ## 🧭 Future Improvements
 
-* Implement real search functionality (current search is visual only)
-* Add infinite scrolling / pagination
-* Add dark mode
-* Create a channel page with stats and videos
-* Cache responses locally to reduce API calls
-* Improve error handling for player and network issues
+- Real search (current bar is visual only)
+- Infinite scroll / pagination
+- Dark mode theme
+- Dedicated channel page (videos + stats)
+- Local caching (sessionStorage / IndexedDB)
+- Error boundaries & retry UI
 
 ---
 
 ## 🤝 Contributing
 
-1. Fork this repository
-2. Create a new branch:
-
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. Commit your changes
-4. Push your branch
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feature/your-feature`
+3. Commit: `git commit -m "Add feature"`
+4. Push: `git push origin feature/your-feature`
 5. Open a Pull Request 🚀
-
----
-
-## 📄 License
-
-MIT © 2025
-
----
 
 ## 🙏 Acknowledgements
 
-* [YouTube Data API v3](https://developers.google.com/youtube/v3)
-* [React](https://react.dev/) & [Vite](https://vitejs.dev/)
-* [GreatStack YouTube Channel](https://www.youtube.com/@GreatStackDev) — Original tutorial inspiration
-* Open Source Community ❤️
+- [YouTube Data API v3](https://developers.google.com/youtube/v3)
+- [React](https://react.dev/) & [Vite](https://vitejs.dev/)
+- Tutorial inspiration: GreatStack
+- Open Source Community ❤️
 
 ---
 
 > If this project helped you, please consider giving it a ⭐ on GitHub!
+
+---
+
+### 📌 Potential Future Sections
+
+| Section | Purpose |
+|---------|---------|
+| Demo / Screenshots | Visual showcase |
+| Performance Notes | Bundle size, Lighthouse scores |
+| Testing Strategy | Document when tests added |
+| Dark Mode | Theming notes once implemented |
