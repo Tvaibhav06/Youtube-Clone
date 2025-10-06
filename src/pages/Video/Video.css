@@ -1,0 +1,18 @@
+.play-container{
+  background: #fff;
+  min-height: 100vh;
+  padding-top: 4px;
+  padding-left: 4px;
+  display: flex;
+  width: 101%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .play-container{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

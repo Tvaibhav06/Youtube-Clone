@@ -1,0 +1,19 @@
+.container{
+    padding-left: 17%;
+    padding-right: 5%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.large-container{
+    padding-left: 7%;
+}
+@media (max-width: 900px) {
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .large-container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

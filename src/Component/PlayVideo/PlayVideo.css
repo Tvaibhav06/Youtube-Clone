@@ -1,0 +1,364 @@
+.play-video {
+    padding-left: 2%;
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+}
+
+.play-video iframe {
+    width: 100%;
+    height: 37vw;
+    max-width: 100%;
+    background: #000;
+}
+
+.play-video .title {
+    margin-top: 15px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #0f0f0f;
+    line-height: 1.3;
+}
+
+.play-video .play-video-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #606060;
+}
+
+.play-video .play-video-info a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+.play-video .play-video-info a:hover {
+    color: #000;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.play-video .play-video-info .actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.play-video .play-video-info .actions span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 16px;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    font-weight: 500;
+    color: #0f0f0f;
+    transition: background-color 0.3s ease;
+}
+
+.play-video .play-video-info .actions span:hover {
+    background-color: #e5e5e5;
+}
+
+.play-video .play-video-info .actions img {
+    width: 16px;
+    height: 16px;
+}
+
+.play-video hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 10px 0;
+}
+
+.publisher {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.publisher img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.publisher div {
+    flex: 1;
+}
+
+.publisher div p {
+    margin: 0;
+    font-weight: 500;
+    color: #0f0f0f;
+    font-size: 14px;
+}
+
+.publisher div span {
+    font-size: 12px;
+    color: #606060;
+    line-height: 1.8;
+}
+
+.publisher button {
+    background: #cc0000;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.publisher button:hover {
+    background: #aa0000;
+}
+
+
+.comments-count {
+    font-size: 16px;
+    font-weight: 600;
+    color: #0f0f0f;
+    margin: 24px 0 16px 0;
+}
+
+.add-comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 24px 0;
+    gap: 16px;
+}
+
+.add-comment img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.add-comment input {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 8px 0;
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.add-comment input:focus {
+    border-bottom-color: #065fd4;
+}
+
+.old-comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+    gap: 16px;
+}
+
+.old-comment img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.old-comment .comment-content {
+    flex: 1;
+}
+
+.old-comment h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #0f0f0f;
+}
+
+.old-comment h3 span {
+    font-size: 12px;
+    color: #606060;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.old-comment p {
+    font-size: 14px;
+    color: #0f0f0f;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin: 16px 0;
+    gap: 12px;
+}
+
+.comment img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.comment div {
+    flex: 1;
+}
+
+.comment h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-weight: 500;
+    color: #0f0f0f;
+    line-height: 1.2;
+}
+
+.comment h3 span {
+    font-size: 12px;
+    color: #606060;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+.comment p {
+    font-size: 14px;
+    color: #0f0f0f;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+.comment-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+.comment-action img {
+    border-radius: 0;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+.comment-action span {
+    color: #606060;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    min-width: 20px;
+    text-align: center;
+}
+
+.comment-action span:hover {
+    background-color: #f2f2f2;
+    color: #0f0f0f;
+}
+
+.old-comment .comment-action {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+
+.old-comment .comment-action img {
+    border-radius: 0;
+    width: 12px;
+    height: 12px;
+}
+
+.old-comment .comment-action span {
+    color: #606060;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 12px;
+    font-size: 11px;
+    transition: background-color 0.3s ease;
+}
+
+.old-comment .comment-action span:hover {
+    background-color: #f2f2f2;
+    color: #0f0f0f;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .play-video {
+        padding: 16px;
+    }
+    
+    .play-video .title {
+        font-size: 18px;
+    }
+    
+    .play-video .play-video-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .play-video .play-video-info .actions {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .publisher {
+        margin: 12px 0;
+    }
+    
+    .vid-description {
+        margin: 12px 0;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .play-video {
+        flex-basis: 100%;
+    }
+   .play-video iframe {
+        width: 100%;
+        height: 50vw;
+    }
+    .vid-description{
+        padding-left: 0;
+    }
+    .play-video .play-video-info span{
+        margin-left: 0px;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+}
