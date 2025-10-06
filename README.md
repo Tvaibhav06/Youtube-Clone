@@ -1,34 +1,10 @@
-
----
-
-```markdown
-<div align="center">
-	<h1>React YouTube Clone</h1>
-	<p>A simple, lightweight YouTube-style video app built with React 19, Vite, and the YouTube Data API v3.</p>
-	<img src="./src/assets/logo.png" alt="Logo" width="140" />
-	<br/>
-	<sub>For learning purposes only — not affiliated with Google or YouTube.</sub>
-</div>
-```
----
-
-## ✨ Features
-
-- Browse trending videos by category (Gaming, Music, Sports, News, etc.)
-- Watch videos through an embedded YouTube player
-- View detailed video info (views, upload date, description, channel)
-- Recommended videos with fallback support
-- Fully responsive layout (collapsible sidebar, adaptive search bar)
-- Comments section with avatars and timestamps
-- Category-based filtering using YouTube category IDs
-- Environment-based API key management (`.env` file)
 <p align="center">
-	<h1 align="center">React YouTube Clone</h1>
-	<p align="center">A simple, lightweight YouTube‑style video app built with React 19, Vite, and the YouTube Data API v3.</p>
-	<p align="center">
-		<img src="./src/assets/logo.png" alt="Logo" width="140" />
-	</p>
-	<p align="center"><sub>For learning purposes only — not affiliated with Google or YouTube.</sub></p>
+  <h1 align="center">React YouTube Clone</h1>
+  <p align="center">A simple, lightweight YouTube‑style video app built with React 19, Vite, and the YouTube Data API v3.</p>
+  <p align="center">
+    <img src="./src/assets/logo2.png" alt="Logo" width="140" />
+  </p>
+  <p align="center"><sub>For learning purposes only — not affiliated with Google or YouTube.</sub></p>
 </p>
 
 ---
@@ -116,7 +92,7 @@ Parameters are accessed with `useParams()` inside page components.
 
 ---
 
-## 🔗 YouTube Categories Used
+## � YouTube Categories Used
 
 | Category          | ID |
 |-------------------|----|
@@ -216,7 +192,7 @@ Parameters are accessed with `useParams()` inside page components.
 
 - [YouTube Data API v3](https://developers.google.com/youtube/v3)
 - [React](https://react.dev/) & [Vite](https://vitejs.dev/)
-- Tutorial inspiration: GreatStack
+- Tutorial inspiration: [GreatStack](https://www.youtube.com/watch?v=Zb1zVeXLUf8&pp=ygUZZ3JlYXQgc3RhY2sgeW91dHViZSBjbG9uZQ%3D%3D)
 - Open Source Community ❤️
 
 ---
@@ -233,3 +209,4 @@ Parameters are accessed with `useParams()` inside page components.
 | Performance Notes | Bundle size, Lighthouse scores |
 | Testing Strategy | Document when tests added |
 | Dark Mode | Theming notes once implemented |
+
